@@ -63,7 +63,7 @@
         <span class="dot"></span>
         <span data-i18n="hero.status">Currently at <a href="https://need.ai" target="_blank" rel="noopener">need.ai</a></span>
         <span class="sep">·</span>
-        <span class="mono" id="clock">CDMX</span>
+        <span class="mono" id="clock">SF</span>
       </div>
 
       <div class="name reveal">
@@ -374,13 +374,13 @@
       try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
     });
 
-    // Local time in Mexico City
+    // Local time in San Francisco
     const clock = document.getElementById("clock");
     const tick = () => {
       const t = new Intl.DateTimeFormat("en-US", {
-        timeZone: "America/Mexico_City", hour: "2-digit", minute: "2-digit"
+        timeZone: "America/Los_Angeles", hour: "2-digit", minute: "2-digit"
       }).format(new Date());
-      clock.textContent = `CDMX ${t}`;
+      clock.textContent = `SF ${t}`;
     };
     tick();
     setInterval(tick, 30000);

@@ -1,0 +1,55 @@
+# CLAUDE.md
+
+> Context for Claude Code. Read this before changing anything.
+
+## What this is
+
+Diego Zurita's personal landing page, positioned as **Recruiting Operations** (official title: Recruitment Lead at Need). Based in San Francisco.
+
+- Live: https://dzs97.github.io (GitHub Pages, repo `Dzs97/Dzs97.github.io`, public)
+- Plain HTML + CSS + a little vanilla JS. No build step, no frameworks, no Tailwind.
+- Content source of truth: Diego's CV (`diego-zurita-cv.pdf`) and LinkedIn (https://www.linkedin.com/in/diegozuritas/).
+
+## Files
+
+```
+index.html          All content + JS (i18n, counters, pipeline tabs, spotlight)
+styles.css          All styles, organized by /* ============ SECTION ============ */
+img/                diego.jpg (portrait), diego-square.jpg (avatar)
+img/tools/          64px tool icons (Ashby, Lever, Juicebox, Notion, Wrangle)
+og.png              1200×630 link preview (LinkedIn/WhatsApp/Slack)
+_og/og.html         Template used to render og.png (underscore dir = not published)
+diego-zurita-cv.pdf Downloadable CV
+```
+
+## Conventions
+
+1. **Bilingual EN/ES.** English lives in the HTML; every translatable element has `data-i18n="key"` and its Spanish text goes in the `ES` dictionary at the bottom of `index.html`. When adding or editing text, update both.
+2. **Cache busting:** bump `styles.css?v=N` in `index.html` on every CSS change. Same idea for replaced images (e.g. `wrangle.png?v=2`).
+3. **Theming:** colors are CSS variables on `:root`, with dark overrides under `@media (prefers-color-scheme: dark)` + `:root[data-theme="dark"]`. Add new colors the same way.
+4. **Fonts:** Inter (body), Instrument Serif italic (accents in `<em>`), JetBrains Mono (labels).
+5. **Logos:** company logos (Need, Atoms, BairesDev) are inline SVGs using `currentColor`, taken from each company's own site. Greenhouse/LinkedIn icons are inline SVGs from Simple Icons; the rest are PNGs in `img/tools/`.
+6. **Testimonials are verbatim quotes** from LinkedIn recommendations — never reword them, never translate them.
+7. **Job titles must match LinkedIn.** Positioning copy (hero, about) can say "Recruiting Operations".
+
+## Workflow
+
+- **Claude makes the commits and pushes** (don't hand Diego git commands). Commit messages in English, conventional style (`feat:`, `fix:`).
+- Before pushing, preview locally: `python3 -m http.server 4173` in this folder, check desktop + mobile (375px) + light/dark + ES toggle.
+- After pushing, confirm the Pages deploy succeeded:
+  `curl -s "https://api.github.com/repos/Dzs97/Dzs97.github.io/actions/runs?per_page=1"`
+  GitHub Pages occasionally fails the *deploy* step with a 500 — that's GitHub, not the code. Retrigger with an empty commit.
+- `gh` CLI is not installed. Git credentials in the macOS Keychain work for Dzs97 repos.
+- Regenerate `og.png` after changing name/role/headline:
+  `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --window-size=1200,630 --virtual-time-budget=5000 --screenshot=og.png "file://$PWD/_og/og.html"`
+
+## Communication
+
+Diego speaks Spanish primarily — reply in Spanish, concise, with brief technical reasoning when useful. He's comfortable with git/terminal but isn't a developer.
+
+## Pending / backlog
+
+- **Case study** section (`#case`) is scaffolded but `hidden`. Needs Diego's content: problem → what he did → result for "How I cut interview no-shows by 90%". Remove `hidden` and add ES strings when filled.
+- **Sourcing Tracker is listed WITHOUT a link on purpose** — it holds work data and its deployment isn't access-protected. Never link it or name its URL here (this repo is public). Ask Diego whether he has locked it down yet.
+- Ideas not done yet: custom domain (e.g. diegozurita.com), analytics (GoatCounter).
+- The Need tenure ("3 yrs 2 mos") is hardcoded to match LinkedIn — update occasionally.

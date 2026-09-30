@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diego Zurita</title>
+  <meta name="description" content="Diego Zurita — personal site." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <span class="mono">dzs97.github.io</span>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <p class="mono eyebrow">Hi, I'm</p>
+      <h1>Diego Zurita</h1>
+      <!-- TODO: replace with your role -->
+      <p class="role">[Your role] at <a href="https://need.ai">need.ai</a></p>
+      <!-- TODO: replace with a 2-3 sentence bio -->
+      <p class="bio">
+        Short bio goes here — what you do, what you care about, and what
+        you're working on right now. Two or three sentences is plenty.
+      </p>
+      <nav class="links">
+        <!-- TODO: fill in your real URLs -->
+        <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Dzs97" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:you@example.com">Email</a>
+      </nav>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section>
+      <h2 class="mono">Experience</h2>
+      <ul class="list">
+        <!-- TODO: add/edit entries -->
+        <li>
+          <div class="row"><strong>[Role]</strong><span class="mono muted">20XX — Present</span></div>
+          <p class="muted">need.ai · One line about what you do there.</p>
+        </li>
+        <li>
+          <div class="row"><strong>[Previous role]</strong><span class="mono muted">20XX — 20XX</span></div>
+          <p class="muted">Company · One line about impact.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section>
+      <h2 class="mono">Projects</h2>
+      <ul class="list">
+        <li>
+          <a class="row card" href="https://viajes-eight.vercel.app/" target="_blank" rel="noopener">
+            <strong>My Travel</strong><span class="mono muted">↗</span>
+          </a>
+          <p class="muted">Interactive itinerary for a 24-day trip across England, Ireland and Scotland. Next.js + Google Maps.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="mono muted">© <span id="year"></span> Diego Zurita</footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const root = document.documentElement;
+      const isDark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = isDark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    });
+  </script>
+</body>
+</html>

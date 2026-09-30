@@ -1,0 +1,124 @@
+/* ============ TOKENS ============ */
+:root {
+  --bg: #fafaf9;
+  --ink: #1c1917;
+  --ink-muted: #78716c;
+  --border: #e7e5e4;
+  --accent: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0a09;
+    --ink: #f5f5f4;
+    --ink-muted: #a8a29e;
+    --border: #292524;
+    --accent: #60a5fa;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0c0a09;
+  --ink: #f5f5f4;
+  --ink-muted: #a8a29e;
+  --border: #292524;
+  --accent: #60a5fa;
+}
+
+/* ============ BASE ============ */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.6 "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.8rem; }
+.muted { color: var(--ink-muted); }
+
+/* ============ LAYOUT ============ */
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--ink-muted);
+  margin-bottom: 80px;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.icon-btn:hover { border-color: var(--ink-muted); }
+
+section { margin-bottom: 64px; }
+
+/* ============ HERO ============ */
+.eyebrow { color: var(--ink-muted); margin: 0 0 8px; }
+
+h1 {
+  font-size: clamp(2.25rem, 7vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.role { font-size: 1.125rem; margin: 0 0 20px; }
+.bio { color: var(--ink-muted); margin: 0 0 28px; max-width: 52ch; }
+
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.links a {
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.links a:hover { border-color: var(--ink); text-decoration: none; }
+
+/* ============ LISTS ============ */
+h2 {
+  color: var(--ink-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 20px;
+}
+
+.list { list-style: none; margin: 0; padding: 0; }
+.list li {
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+.list li p { margin: 4px 0 0; font-size: 0.95rem; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.card { color: var(--ink); }
+.card:hover { text-decoration: none; color: var(--accent); }
+
+footer { padding-top: 24px; border-top: 1px solid var(--border); }

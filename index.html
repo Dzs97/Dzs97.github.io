@@ -3,16 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diego Zurita</title>
-  <meta name="description" content="Diego Zurita — personal site." />
-  <meta property="og:title" content="Diego Zurita" />
-  <meta property="og:description" content="Personal site of Diego Zurita." />
-  <meta property="og:url" content="https://dzs97.github.io" />
+  <title>Diego Zurita — Recruitment Lead</title>
+  <meta name="description" content="Diego Zurita — Recruitment Lead building recruiting systems from 0 to 100. Currently hiring across San Francisco, Seoul and Tokyo." />
+
+  <!-- Link previews (LinkedIn, WhatsApp, Slack, X) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dzs97.github.io/" />
+  <meta property="og:title" content="Diego Zurita — Recruitment Lead" />
+  <meta property="og:description" content="Building recruiting systems from 0 to 100." />
+  <meta property="og:image" content="https://dzs97.github.io/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://dzs97.github.io/og.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23111'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23f5f5f4'>dz</text></svg>" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="apple-touch-icon" href="img/diego-square.jpg" />
+  <!-- Bump ?v= whenever styles.css changes so browsers skip their cache -->
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script>
     // Apply saved theme before paint to avoid a flash
     try {
@@ -32,10 +43,12 @@
   <header class="nav">
     <a href="#top" class="logo">dz<span>.</span></a>
     <nav class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <button id="lang-toggle" class="icon-btn lang-btn mono" aria-label="Cambiar a español">ES</button>
     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
       <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -48,140 +61,181 @@
     <section class="hero">
       <div class="status reveal">
         <span class="dot"></span>
-        <span>Currently at <a href="https://need.ai" target="_blank" rel="noopener">need.ai</a></span>
+        <span data-i18n="hero.status">Currently at <a href="https://need.ai" target="_blank" rel="noopener">need.ai</a></span>
         <span class="sep">·</span>
         <span class="mono" id="clock">CDMX</span>
       </div>
 
-      <p class="name reveal">Diego Zurita <span class="muted">— Recruitment Lead</span></p>
+      <div class="name reveal">
+        <img class="avatar" src="img/diego-square.jpg" alt="Diego Zurita" width="44" height="44" />
+        <p>Diego Zurita <span class="muted" data-i18n="hero.role">— Recruitment Lead</span></p>
+      </div>
 
-      <h1 class="reveal">
+      <h1 class="reveal" data-i18n="hero.title">
         Building recruiting systems from <em>0&nbsp;to&nbsp;100</em>
       </h1>
 
-      <p class="lede reveal">
+      <p class="lede reveal" data-i18n="hero.lede">
         Currently helping build <em>the world's first cancer protection
         system</em> — hiring across San Francisco, Seoul and Tokyo.
       </p>
 
       <div class="cta reveal">
         <a class="btn btn-primary" href="mailto:dzurita97@gmail.com">
-          Get in touch
+          <span data-i18n="cta.touch">Get in touch</span>
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/diegozuritas/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-          LinkedIn
+        <a class="btn btn-ghost" href="diego-zurita-cv.pdf" download>
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          <span data-i18n="cta.cv">Download CV</span>
         </a>
-        <a class="btn btn-ghost" href="https://github.com/Dzs97" target="_blank" rel="noopener" aria-label="GitHub">
+        <a class="btn btn-ghost btn-icon" href="https://www.linkedin.com/in/diegozuritas/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-icon" href="https://github.com/Dzs97" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-          GitHub
         </a>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="about reveal">
-      <p class="label mono">01 — About</p>
-      <p class="about-text">
-        I'm a psychologist turned recruiter, based in Mexico City.
-        <span class="muted">For the last five years I've worked across
-        executive search, recruiting ops and full-cycle hiring. I build
-        processes that let teams hire fast without losing great
-        candidates on the way.</span>
-      </p>
-      <ul class="langs mono">
-        <li>English · Native</li>
-        <li>Español · Nativo</li>
-        <li>日本語 · Elementary</li>
-      </ul>
+      <p class="label mono" data-i18n="about.label">01 — About</p>
+      <div class="about-grid">
+        <div>
+          <p class="about-text" data-i18n="about.text">
+            I'm a psychologist turned recruiter, based in Mexico City.
+            <span class="muted">For the last five years I've worked across
+            executive search, recruiting ops and full-cycle hiring. I build
+            processes that let teams hire fast without losing great
+            candidates on the way.</span>
+          </p>
+          <ul class="langs mono">
+            <li data-i18n="about.en">English · Native</li>
+            <li data-i18n="about.es">Español · Native</li>
+            <li data-i18n="about.ja">日本語 · Elementary</li>
+          </ul>
+        </div>
+        <figure class="portrait">
+          <img src="img/diego.jpg" alt="Portrait of Diego Zurita" width="800" height="1000" loading="lazy" />
+        </figure>
+      </div>
     </section>
 
     <!-- ============ IMPACT ============ -->
     <section class="reveal">
-      <p class="label mono">02 — Impact</p>
+      <p class="label mono" data-i18n="impact.label">02 — Impact</p>
       <div class="stats">
         <div class="stat">
-          <span class="num" data-count="3000" data-suffix="+">3000+</span>
-          <span class="muted">interviews scheduled with leads, department heads and C-suite</span>
+          <span class="num" data-count="3000" data-suffix="+">3,000+</span>
+          <span class="muted" data-i18n="impact.1">interviews scheduled with leads, department heads and C-suite</span>
         </div>
         <div class="stat">
           <span class="num" data-count="90" data-prefix="−" data-suffix="%">−90%</span>
-          <span class="muted">interview no-shows, from my first day to my last at Atoms</span>
+          <span class="muted" data-i18n="impact.2">interview no-shows, from my first day to my last at Atoms</span>
         </div>
         <div class="stat">
           <span class="num" data-count="450" data-suffix="K">450K</span>
-          <span class="muted">technical profiles validated in executive search at BairesDev</span>
+          <span class="muted" data-i18n="impact.3">technical profiles validated in executive search at BairesDev</span>
         </div>
         <div class="stat">
-          <span class="num" data-count="30" data-suffix="/day">30/day</span>
-          <span class="muted">interview capacity from a high-volume hiring process I built</span>
+          <span class="num" data-count="30" data-suffix="/day" data-suffix-es="/día">30/day</span>
+          <span class="muted" data-i18n="impact.4">interview capacity from a high-volume hiring process I built</span>
         </div>
       </div>
     </section>
 
     <!-- ============ EXPERIENCE ============ -->
     <section id="work" class="reveal">
-      <p class="label mono">03 — Experience</p>
+      <p class="label mono" data-i18n="work.label">03 — Experience</p>
       <ol class="timeline">
         <li>
-          <span class="when mono">2026 — Now</span>
+          <span class="when mono" data-i18n="work.1.when">2026 — Now</span>
           <div>
-            <h3>Recruitment Lead <span class="at">at Need</span></h3>
-            <p class="muted">Leading hiring for a cancer-protection company across San Francisco, Seoul and Tokyo.</p>
+            <h3 data-i18n="work.1.title">Recruitment Lead <span class="at">at Need</span></h3>
+            <p class="muted" data-i18n="work.1.desc">Leading hiring for a cancer-protection company across San Francisco, Seoul and Tokyo.</p>
           </div>
         </li>
         <li>
           <span class="when mono">2023 — 2026</span>
           <div>
-            <h3>Recruiting &amp; Operations <span class="at">at Need</span></h3>
-            <p class="muted">Built the recruiting engine from the ground up: pipelines, tooling and interview ops.</p>
+            <h3 data-i18n="work.2.title">Recruiting &amp; Operations <span class="at">at Need</span></h3>
+            <p class="muted" data-i18n="work.2.desc">Built the recruiting engine from the ground up: pipelines, tooling and interview ops.</p>
           </div>
         </li>
         <li>
           <span class="when mono">2022 — 2023</span>
           <div>
-            <h3>Recruiter Coordinator &amp; Ops <span class="at">at Atoms</span></h3>
-            <p class="muted">Otter · CloudKitchens · FutureFoods. Top performer and three-time Employee of the Month. Best SLA company-wide in 4 of 6 quarters. Trained 10+ RCs.</p>
+            <h3 data-i18n="work.3.title">Recruiter Coordinator &amp; Ops <span class="at">at Atoms</span></h3>
+            <p class="muted" data-i18n="work.3.desc">Otter · CloudKitchens · FutureFoods. Top performer and three-time Employee of the Month. Best SLA company-wide in 4 of 6 quarters. Trained 10+ RCs.</p>
           </div>
         </li>
         <li>
           <span class="when mono">2021 — 2022</span>
           <div>
-            <h3>Executive Search Consultant <span class="at">at BairesDev</span></h3>
-            <p class="muted">Boolean-search sourcing for technical roles. Only one on a team of 10 to run C-suite searches end to end, from research to offer. Gave 30+ trainings.</p>
+            <h3 data-i18n="work.4.title">Executive Search Consultant <span class="at">at BairesDev</span></h3>
+            <p class="muted" data-i18n="work.4.desc">Boolean-search sourcing for technical roles. Only one on a team of 10 to run C-suite searches end to end, from research to offer. Gave 30+ trainings.</p>
           </div>
         </li>
         <li>
           <span class="when mono">2017 — 2021</span>
           <div>
-            <h3>B.A. Psychology <span class="at">at UVM · Ibero</span></h3>
-            <p class="muted">Universidad del Valle de México and Universidad Iberoamericana. Excelencia Ceneval award.</p>
+            <h3 data-i18n="work.5.title">B.A. Psychology <span class="at">at UVM · Ibero</span></h3>
+            <p class="muted" data-i18n="work.5.desc">Universidad del Valle de México and Universidad Iberoamericana. Excelencia Ceneval award.</p>
           </div>
         </li>
       </ol>
     </section>
 
+    <!-- ============ REVIEWS ============ -->
+    <section id="reviews" class="reveal">
+      <p class="label mono" data-i18n="reviews.label">04 — What people say</p>
+      <div class="quotes">
+        <figure class="quote quote-featured">
+          <blockquote>“In my 10+ years of recruiting I have never worked with a better recruiting coordinator or talent partner. Diego is the ultimate team player… an extremely data driven, solutions first professional.”</blockquote>
+          <figcaption>
+            <span class="initials">CF</span>
+            <span><strong>Claire Furlow</strong><span class="muted">Talent Acquisition Manager</span></span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“He's never afraid to ask questions and dig into the why. He is an incredible team player and cares deeply about candidate experience and team culture.”</blockquote>
+          <figcaption>
+            <span class="initials">IA</span>
+            <span><strong>Ignacio Alvarez</strong><span class="muted">Recruiting</span></span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“An exceptional individual who always impressed me with his attention to detail, proactive mindset, and data-driven approach.”</blockquote>
+          <figcaption>
+            <span class="initials">PR</span>
+            <span><strong>Paulina Ramírez Arias</strong><span class="muted">Talent Recruiter · CloudKitchens</span></span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Diego goes above and beyond to ensure a seamless recruitment process, providing excellent communication and building strong relationships.”</blockquote>
+          <figcaption>
+            <span class="initials">CD</span>
+            <span><strong>Chans Dykes</strong><span class="muted">Talent Engineer Lead</span></span>
+          </figcaption>
+        </figure>
+      </div>
+      <a class="more mono" href="https://www.linkedin.com/in/diegozuritas/details/recommendations/" target="_blank" rel="noopener" data-i18n="reviews.more">Read full recommendations on LinkedIn ↗</a>
+    </section>
+
     <!-- ============ PROJECTS ============ -->
     <section id="projects" class="reveal">
-      <p class="label mono">04 — Side projects</p>
+      <p class="label mono" data-i18n="projects.label">05 — Side projects</p>
       <a class="project" href="https://viajes-eight.vercel.app/" target="_blank" rel="noopener">
         <div class="project-art" aria-hidden="true">
           <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="var(--art-a)"/>
-                <stop offset="1" stop-color="var(--art-b)"/>
-              </linearGradient>
-            </defs>
-            <rect width="400" height="220" fill="url(#sea)"/>
             <path class="route" d="M300 190 C 270 160, 250 150, 230 130 S 150 120, 120 100 S 140 60, 180 50 S 250 30, 240 20" fill="none" stroke="var(--art-line)" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
             <g fill="var(--art-line)">
               <circle cx="300" cy="190" r="5"/>
               <circle cx="120" cy="100" r="5"/>
               <circle cx="240" cy="20" r="5"/>
             </g>
-            <g class="mono-svg" fill="var(--art-line)" font-size="11" font-family="JetBrains Mono, monospace">
+            <g fill="var(--art-line)" font-size="11" font-family="JetBrains Mono, monospace">
               <text x="312" y="194">London</text>
               <text x="52" y="104">Dublin</text>
               <text x="252" y="24">Edinburgh</text>
@@ -193,7 +247,7 @@
             <h3>My Travel</h3>
             <span class="arrow">↗</span>
           </div>
-          <p class="muted">Interactive itinerary for a 24-day trip across England, Ireland and Scotland — daily routes, maps and a live budget.</p>
+          <p class="muted" data-i18n="projects.desc">Interactive itinerary for a 24-day trip across England, Ireland and Scotland — daily routes, maps and a live budget.</p>
           <ul class="tags mono">
             <li>Next.js</li><li>TypeScript</li><li>Google Maps</li><li>PWA</li>
           </ul>
@@ -203,21 +257,110 @@
 
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="contact reveal">
-      <p class="label mono">05 — Contact</p>
-      <h2>Let's <em>talk.</em></h2>
-      <button class="email" id="copy-email" data-email="dzurita97@gmail.com">
-        <span>dzurita97@gmail.com</span>
-        <span class="copy-hint mono" id="copy-hint">Copy</span>
-      </button>
+      <p class="label mono" data-i18n="contact.label">06 — Contact</p>
+      <h2 data-i18n="contact.title">Let's <em>talk.</em></h2>
+      <div class="contact-row">
+        <button class="email" id="copy-email" data-email="dzurita97@gmail.com">
+          <span>dzurita97@gmail.com</span>
+          <span class="copy-hint mono" id="copy-hint">Copy</span>
+        </button>
+        <a class="btn btn-ghost" href="diego-zurita-cv.pdf" download>
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+          <span data-i18n="cta.cv">Download CV</span>
+        </a>
+      </div>
     </section>
 
     <footer class="footer mono">
       <span>© <span id="year"></span> Diego Zurita</span>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top" data-i18n="footer.top">Back to top ↑</a>
     </footer>
   </main>
 
   <script>
+    // ============ I18N ============
+    // English lives in the HTML; Spanish overrides by data-i18n key.
+    const ES = {
+      "nav.work": "Experiencia",
+      "nav.reviews": "Reseñas",
+      "nav.projects": "Proyectos",
+      "nav.contact": "Contacto",
+      "hero.status": 'Actualmente en <a href="https://need.ai" target="_blank" rel="noopener">need.ai</a>',
+      "hero.role": "— Recruitment Lead",
+      "hero.title": "Construyendo sistemas de reclutamiento de <em>0&nbsp;a&nbsp;100</em>",
+      "hero.lede": "Hoy ayudo a construir <em>el primer sistema de protección contra el cáncer del mundo</em> — contratando en San Francisco, Seúl y Tokio.",
+      "cta.touch": "Hablemos",
+      "cta.cv": "Descargar CV",
+      "about.label": "01 — Sobre mí",
+      "about.text": 'Soy psicólogo convertido en reclutador, con base en la Ciudad de México. <span class="muted">Los últimos cinco años he trabajado en executive search, recruiting ops y reclutamiento full-cycle. Construyo procesos que permiten a los equipos contratar rápido sin perder buenos candidatos en el camino.</span>',
+      "about.en": "English · Nativo",
+      "about.es": "Español · Nativo",
+      "about.ja": "日本語 · Básico",
+      "impact.label": "02 — Impacto",
+      "impact.1": "entrevistas agendadas con líderes de equipo, directores y C-suite",
+      "impact.2": "de ausencias a entrevistas, de mi primer a mi último día en Atoms",
+      "impact.3": "perfiles técnicos validados en executive search en BairesDev",
+      "impact.4": "entrevistas de capacidad gracias a un proceso de alto volumen que construí",
+      "work.label": "03 — Experiencia",
+      "work.1.when": "2026 — Hoy",
+      "work.1.title": 'Recruitment Lead <span class="at">en Need</span>',
+      "work.1.desc": "Liderando la contratación de una empresa de protección contra el cáncer en San Francisco, Seúl y Tokio.",
+      "work.2.title": 'Recruiting &amp; Operations <span class="at">en Need</span>',
+      "work.2.desc": "Construí el motor de reclutamiento desde cero: pipelines, herramientas y operación de entrevistas.",
+      "work.3.title": 'Recruiter Coordinator &amp; Ops <span class="at">en Atoms</span>',
+      "work.3.desc": "Otter · CloudKitchens · FutureFoods. Top performer y tres veces Empleado del Mes. Mejor SLA de la empresa en 4 de 6 trimestres. Capacité a más de 10 RCs.",
+      "work.4.title": 'Executive Search Consultant <span class="at">en BairesDev</span>',
+      "work.4.desc": "Sourcing con búsquedas booleanas para perfiles técnicos. El único de un equipo de 10 en llevar búsquedas C-suite de principio a fin, de la investigación a la oferta. Más de 30 capacitaciones impartidas.",
+      "work.5.title": 'Lic. en Psicología <span class="at">UVM · Ibero</span>',
+      "work.5.desc": "Universidad del Valle de México y Universidad Iberoamericana. Premio Excelencia Ceneval.",
+      "reviews.label": "04 — Lo que dicen",
+      "reviews.more": "Lee las recomendaciones completas en LinkedIn ↗",
+      "projects.label": "05 — Proyectos personales",
+      "projects.desc": "Itinerario interactivo para un viaje de 24 días por Inglaterra, Irlanda y Escocia — rutas diarias, mapas y presupuesto en vivo.",
+      "contact.label": "06 — Contacto",
+      "contact.title": "<em>Hablemos.</em>",
+      "footer.top": "Volver arriba ↑",
+    };
+    const UI = {
+      en: { copy: "Copy", copied: "Copied ✓", toggle: "ES", toggleLabel: "Cambiar a español", locale: "en-US" },
+      es: { copy: "Copiar", copied: "Copiado ✓", toggle: "EN", toggleLabel: "Switch to English", locale: "es-MX" },
+    };
+
+    const i18nEls = document.querySelectorAll("[data-i18n]");
+    const EN = new Map([...i18nEls].map((el) => [el, el.innerHTML]));
+    let lang = "en";
+    try {
+      lang = localStorage.getItem("lang") || (navigator.language.startsWith("es") ? "es" : "en");
+    } catch (e) {}
+
+    const langBtn = document.getElementById("lang-toggle");
+    const hint = document.getElementById("copy-hint");
+
+    function applyLang(next) {
+      lang = next;
+      document.documentElement.lang = lang;
+      i18nEls.forEach((el) => {
+        const es = ES[el.dataset.i18n];
+        el.innerHTML = lang === "es" && es ? es : EN.get(el);
+      });
+      document.querySelectorAll("[data-count]").forEach((el) => {
+        if (el.dataset.suffixEs) {
+          el.dataset.suffixEn ??= el.dataset.suffix;
+          el.dataset.suffix = lang === "es" ? el.dataset.suffixEs : el.dataset.suffixEn;
+          el.textContent = (el.dataset.prefix || "") + (+el.dataset.count).toLocaleString("en-US") + el.dataset.suffix;
+        }
+      });
+      hint.textContent = UI[lang].copy;
+      langBtn.textContent = UI[lang].toggle;
+      langBtn.setAttribute("aria-label", UI[lang].toggleLabel);
+    }
+    applyLang(lang);
+
+    langBtn.addEventListener("click", () => {
+      applyLang(lang === "en" ? "es" : "en");
+      try { localStorage.setItem("lang", lang); } catch (e) {}
+    });
+
     // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -244,15 +387,14 @@
 
     // Copy email
     const copyBtn = document.getElementById("copy-email");
-    const hint = document.getElementById("copy-hint");
     copyBtn.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(copyBtn.dataset.email);
-        hint.textContent = "Copied ✓";
+        hint.textContent = UI[lang].copied;
       } catch (e) {
         window.location.href = `mailto:${copyBtn.dataset.email}`;
       }
-      setTimeout(() => (hint.textContent = "Copy"), 1800);
+      setTimeout(() => (hint.textContent = UI[lang].copy), 1800);
     });
 
     // Reveal on scroll
@@ -277,13 +419,11 @@
         countIO.unobserve(e.target);
         const el = e.target;
         const end = +el.dataset.count;
-        const pre = el.dataset.prefix || "";
-        const suf = el.dataset.suffix || "";
         const start = performance.now();
         const step = (now) => {
           const p = Math.min((now - start) / 1400, 1);
           const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = pre + Math.round(end * eased).toLocaleString("en-US") + suf;
+          el.textContent = (el.dataset.prefix || "") + Math.round(end * eased).toLocaleString("en-US") + el.dataset.suffix;
           if (p < 1) requestAnimationFrame(step);
         };
         requestAnimationFrame(step);

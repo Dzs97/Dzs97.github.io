@@ -23,7 +23,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23111'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23f5f5f4'>dz</text></svg>" />
   <link rel="apple-touch-icon" href="img/diego-square.jpg" />
   <!-- Bump ?v= whenever styles.css changes so browsers skip their cache -->
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
   <script>
     // Apply saved theme before paint to avoid a flash
     try {
@@ -44,6 +44,7 @@
     <a href="#top" class="logo">dz<span>.</span></a>
     <nav class="nav-links">
       <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#system" data-i18n="nav.system">System</a>
       <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -72,7 +73,7 @@
       </div>
 
       <h1 class="reveal" data-i18n="hero.title">
-        Building recruiting systems from <em>0&nbsp;to&nbsp;100</em>
+        Building recruiting systems from <em>0&nbsp;to&nbsp;<span class="count-100">100</span></em>
       </h1>
 
       <p class="lede reveal" data-i18n="hero.lede">
@@ -96,6 +97,15 @@
         <a class="btn btn-ghost btn-icon" href="https://github.com/Dzs97" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
         </a>
+      </div>
+
+      <div class="logos reveal">
+        <span class="logos-label mono" data-i18n="logos.label">Built recruiting at</span>
+        <ul>
+          <li class="wm wm-need">Need</li>
+          <li class="wm wm-atoms">ATOMS</li>
+          <li class="wm wm-baires">BairesDev</li>
+        </ul>
       </div>
     </section>
 
@@ -127,28 +137,147 @@
     <section class="reveal">
       <p class="label mono" data-i18n="impact.label">02 — Impact</p>
       <div class="stats">
-        <div class="stat">
+        <div class="stat spot">
           <span class="num" data-count="3000" data-suffix="+">3,000+</span>
           <span class="muted" data-i18n="impact.1">interviews scheduled with leads, department heads and C-suite</span>
         </div>
-        <div class="stat">
+        <div class="stat spot">
           <span class="num" data-count="90" data-prefix="−" data-suffix="%">−90%</span>
           <span class="muted" data-i18n="impact.2">interview no-shows, from my first day to my last at Atoms</span>
         </div>
-        <div class="stat">
+        <div class="stat spot">
           <span class="num" data-count="30" data-suffix="/day" data-suffix-es="/día">30/day</span>
           <span class="muted" data-i18n="impact.4">interview capacity from a high-volume process I designed</span>
         </div>
-        <div class="stat">
+        <div class="stat spot">
           <span class="num" data-count="10" data-suffix="+">10+</span>
           <span class="muted" data-i18n="impact.3">recruiting coordinators trained and onboarded on the systems I built</span>
         </div>
       </div>
     </section>
 
+    <!-- ============ HOW I BUILD ============ -->
+    <section id="system" class="reveal">
+      <p class="label mono" data-i18n="build.label">03 — How I build</p>
+      <h2 class="section-title" data-i18n="build.title">A recruiting system, <em>end to end.</em></h2>
+
+      <div class="pipeline" role="tablist" aria-label="Recruiting system stages">
+        <button class="stage spot is-active" role="tab" aria-selected="true" data-stage="0">
+          <span class="stage-n mono">01</span>
+          <span class="stage-name" data-i18n="build.s1">Sourcing criteria</span>
+        </button>
+        <button class="stage spot" role="tab" aria-selected="false" data-stage="1">
+          <span class="stage-n mono">02</span>
+          <span class="stage-name" data-i18n="build.s2">Research</span>
+        </button>
+        <button class="stage spot" role="tab" aria-selected="false" data-stage="2">
+          <span class="stage-n mono">03</span>
+          <span class="stage-name" data-i18n="build.s3">Sourcing</span>
+        </button>
+        <button class="stage spot" role="tab" aria-selected="false" data-stage="3">
+          <span class="stage-n mono">04</span>
+          <span class="stage-name" data-i18n="build.s4">Calibration</span>
+        </button>
+        <button class="stage spot" role="tab" aria-selected="false" data-stage="4">
+          <span class="stage-n mono">05</span>
+          <span class="stage-name" data-i18n="build.s5">Interview sequence</span>
+        </button>
+        <span class="pipeline-progress" aria-hidden="true"></span>
+      </div>
+
+      <div class="stage-panels">
+        <div class="stage-panel is-active" role="tabpanel">
+          <p data-i18n="build.p1">Align with the hiring manager on must-haves, nice-to-haves and deal-breakers — before a single search runs. A clear bar up front saves weeks later.</p>
+          <div class="stage-meta">
+            <span class="stage-out mono" data-i18n="build.o1">Output → intake doc &amp; scorecard</span>
+            <ul class="chips mono"><li>Notion</li></ul>
+          </div>
+        </div>
+        <div class="stage-panel" role="tabpanel">
+          <p data-i18n="build.p2">Map the market: target companies, teams, titles and talent pools worth going after — and which ones to skip. Every pool gets tracked as tried, targeting or blacklisted.</p>
+          <div class="stage-meta">
+            <span class="stage-out mono" data-i18n="build.o2">Output → talent map &amp; target list</span>
+            <ul class="chips mono"><li>LinkedIn Recruiter</li><li>Juicebox</li></ul>
+          </div>
+        </div>
+        <div class="stage-panel" role="tabpanel">
+          <p data-i18n="build.p3">Boolean and AI-assisted search to build pipelines at volume without losing precision — including C-suite searches run end to end.</p>
+          <div class="stage-meta">
+            <span class="stage-out mono" data-i18n="build.o3">Proof → 450K+ profiles validated</span>
+            <ul class="chips mono"><li>LinkedIn Recruiter</li><li>Juicebox</li></ul>
+          </div>
+        </div>
+        <div class="stage-panel" role="tabpanel">
+          <p data-i18n="build.p4">Weekly loops with sourcers and hiring managers to tighten the profile using real pipeline data — I act as the bridge between both sides.</p>
+          <div class="stage-meta">
+            <span class="stage-out mono" data-i18n="build.o4">Cadence → weekly calibration</span>
+            <ul class="chips mono"><li>Ashby</li><li>Notion</li></ul>
+          </div>
+        </div>
+        <div class="stage-panel" role="tabpanel">
+          <p data-i18n="build.p5">Structured, well-scheduled interview loops that keep candidates warm and stakeholders on time — designed to run at volume with minimal human error.</p>
+          <div class="stage-meta">
+            <span class="stage-out mono" data-i18n="build.o5">Proof → −90% no-shows · 30 interviews/day</span>
+            <ul class="chips mono"><li>Greenhouse</li><li>Ashby</li><li>Lever</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="toolkit">
+        <p class="toolkit-label mono" data-i18n="build.toolkit">Toolkit</p>
+        <div class="toolkit-groups">
+          <div class="tool-group">
+            <span class="mono muted" data-i18n="build.ats">ATS</span>
+            <ul class="tools">
+              <li class="spot"><span class="tool-mark" style="--c: #24a47f">G</span>Greenhouse</li>
+              <li class="spot"><span class="tool-mark" style="--c: #3d3dd1">A</span>Ashby</li>
+              <li class="spot"><span class="tool-mark" style="--c: #1f2937">L</span>Lever</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <span class="mono muted" data-i18n="build.sourcing">Sourcing</span>
+            <ul class="tools">
+              <li class="spot"><span class="tool-mark" style="--c: #0a66c2">in</span>LinkedIn Recruiter</li>
+              <li class="spot"><span class="tool-mark" style="--c: #f59e0b">J</span>Juicebox</li>
+            </ul>
+          </div>
+          <div class="tool-group">
+            <span class="mono muted" data-i18n="build.ops">Ops &amp; workflow</span>
+            <ul class="tools">
+              <li class="spot"><span class="tool-mark" style="--c: #111">N</span>Notion</li>
+              <li class="spot"><span class="tool-mark" style="--c: #7c3aed">W</span>Wrangle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE STUDY ============ -->
+    <!-- Hidden until content is ready. Remove the `hidden` attribute to publish. -->
+    <section id="case" class="reveal" hidden>
+      <p class="label mono">Case study</p>
+      <article class="case spot">
+        <h2 class="section-title">How I cut interview no-shows by <em>90%</em></h2>
+        <div class="case-grid">
+          <div>
+            <h3 class="mono">Problem</h3>
+            <p class="muted">TODO — what was happening and why it mattered.</p>
+          </div>
+          <div>
+            <h3 class="mono">What I did</h3>
+            <p class="muted">TODO — the process, tooling and communication changes.</p>
+          </div>
+          <div>
+            <h3 class="mono">Result</h3>
+            <p class="muted">TODO — −90% no-shows, plus any secondary wins.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <!-- ============ EXPERIENCE ============ -->
     <section id="work" class="reveal">
-      <p class="label mono" data-i18n="work.label">03 — Experience</p>
+      <p class="label mono" data-i18n="work.label">04 — Experience</p>
       <ol class="timeline">
         <li>
           <span class="when mono" data-i18n="work.need.when">Aug 2023 — Now</span>
@@ -165,7 +294,7 @@
           <span class="when mono">Mar 2022 — Aug 2023</span>
           <div>
             <h3>Recruiter Coordinator and Operations <span class="at" data-i18n="work.atoms.at">at Atoms</span></h3>
-            <p class="place mono" data-i18n="work.atoms.place">Los Angeles · Hybrid · Otter | FutureFoods | Kitchen Valley | CloudKitchens</p>
+            <p class="place mono" data-i18n="work.atoms.place">Los Angeles · Hybrid · Otter | FutureFoods | Kitchen Valley | Atoms</p>
             <details>
               <summary class="mono" data-i18n="work.more">Highlights</summary>
               <ul class="bullets" data-i18n="work.atoms.list">
@@ -212,30 +341,30 @@
 
     <!-- ============ REVIEWS ============ -->
     <section id="reviews" class="reveal">
-      <p class="label mono" data-i18n="reviews.label">04 — What people say</p>
+      <p class="label mono" data-i18n="reviews.label">05 — What people say</p>
       <div class="quotes">
-        <figure class="quote quote-featured">
+        <figure class="quote quote-featured spot">
           <blockquote>“In my 10+ years of recruiting I have never worked with a better recruiting coordinator or talent partner. Diego is the ultimate team player… an extremely data driven, solutions first professional.”</blockquote>
           <figcaption>
             <span class="initials">CF</span>
             <span><strong>Claire Furlow</strong><span class="muted">Talent Acquisition Manager</span></span>
           </figcaption>
         </figure>
-        <figure class="quote">
+        <figure class="quote spot">
           <blockquote>“He's never afraid to ask questions and dig into the why. He is an incredible team player and cares deeply about candidate experience and team culture.”</blockquote>
           <figcaption>
             <span class="initials">IA</span>
             <span><strong>Ignacio Alvarez</strong><span class="muted">Recruiting</span></span>
           </figcaption>
         </figure>
-        <figure class="quote">
+        <figure class="quote spot">
           <blockquote>“An exceptional individual who always impressed me with his attention to detail, proactive mindset, and data-driven approach.”</blockquote>
           <figcaption>
             <span class="initials">PR</span>
-            <span><strong>Paulina Ramírez Arias</strong><span class="muted">Talent Recruiter · CloudKitchens</span></span>
+            <span><strong>Paulina Ramírez Arias</strong><span class="muted">Talent Recruiter · Atoms</span></span>
           </figcaption>
         </figure>
-        <figure class="quote">
+        <figure class="quote spot">
           <blockquote>“Diego goes above and beyond to ensure a seamless recruitment process, providing excellent communication and building strong relationships.”</blockquote>
           <figcaption>
             <span class="initials">CD</span>
@@ -248,9 +377,9 @@
 
     <!-- ============ PROJECTS ============ -->
     <section id="projects" class="reveal">
-      <p class="label mono" data-i18n="projects.label">05 — Side projects</p>
+      <p class="label mono" data-i18n="projects.label">06 — Side projects</p>
       <div class="projects">
-        <a class="project project-wide" href="https://viajes-eight.vercel.app/" target="_blank" rel="noopener">
+        <a class="project project-wide spot" href="https://viajes-eight.vercel.app/" target="_blank" rel="noopener">
           <div class="project-art art-travel" aria-hidden="true">
             <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet">
               <path class="route" d="M300 190 C 270 160, 250 150, 230 130 S 150 120, 120 100 S 140 60, 180 50 S 250 30, 240 20" fill="none" stroke="var(--art-line)" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
@@ -278,7 +407,7 @@
           </div>
         </a>
 
-        <a class="project" href="https://jp-dzs.vercel.app/" target="_blank" rel="noopener">
+        <a class="project spot" href="https://jp-dzs.vercel.app/" target="_blank" rel="noopener">
           <div class="project-art art-jp" aria-hidden="true">
             <div class="flashcard flashcard-back">か</div>
             <div class="flashcard">日本語<span class="mono">nihongo</span></div>
@@ -295,7 +424,7 @@
           </div>
         </a>
 
-        <div class="project">
+        <div class="project spot">
           <div class="project-art art-sourcing" aria-hidden="true">
             <div class="pipe"><span style="--w: 92%"></span><em class="mono">new</em></div>
             <div class="pipe"><span style="--w: 64%"></span><em class="mono">targeting</em></div>
@@ -318,7 +447,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="contact reveal">
-      <p class="label mono" data-i18n="contact.label">06 — Contact</p>
+      <p class="label mono" data-i18n="contact.label">07 — Contact</p>
       <h2 data-i18n="contact.title">Let's <em>talk.</em></h2>
       <div class="contact-row">
         <button class="email" id="copy-email" data-email="dzurita97@gmail.com">
@@ -343,12 +472,13 @@
     // English lives in the HTML; Spanish overrides by data-i18n key.
     const ES = {
       "nav.work": "Experiencia",
+      "nav.system": "Sistema",
       "nav.reviews": "Reseñas",
       "nav.projects": "Proyectos",
       "nav.contact": "Contacto",
       "hero.status": 'Actualmente en <a href="https://need.ai" target="_blank" rel="noopener">need.ai</a>',
       "hero.role": "— Recruiting Operations",
-      "hero.title": "Construyendo sistemas de reclutamiento de <em>0&nbsp;a&nbsp;100</em>",
+      "hero.title": 'Construyendo sistemas de reclutamiento de <em>0&nbsp;a&nbsp;<span class="count-100">100</span></em>',
       "hero.lede": "Diseño los procesos, herramientas y datos detrás de la contratación. Hoy en Need, ayudando a construir <em>el primer sistema de protección contra el cáncer del mundo</em> en San Francisco, Seúl y Tokio.",
       "cta.touch": "Hablemos",
       "cta.cv": "Descargar CV",
@@ -362,14 +492,36 @@
       "impact.2": "de ausencias a entrevistas, de mi primer a mi último día en Atoms",
       "impact.3": "recruiting coordinators capacitados e integrados en los sistemas que construí",
       "impact.4": "entrevistas de capacidad gracias a un proceso de alto volumen que diseñé",
-      "work.label": "03 — Experiencia",
+      "logos.label": "Construí reclutamiento en",
+      "build.label": "03 — Cómo construyo",
+      "build.title": "Un sistema de reclutamiento, <em>de punta a punta.</em>",
+      "build.s1": "Criterios de sourcing",
+      "build.s2": "Investigación",
+      "build.s3": "Sourcing",
+      "build.s4": "Calibración",
+      "build.s5": "Secuencia de entrevistas",
+      "build.p1": "Alinear con el hiring manager los must-haves, nice-to-haves y deal-breakers — antes de correr una sola búsqueda. Una vara clara desde el inicio ahorra semanas después.",
+      "build.o1": "Resultado → intake doc y scorecard",
+      "build.p2": "Mapear el mercado: empresas objetivo, equipos, títulos y talent pools que vale la pena atacar — y cuáles descartar. Cada pool queda registrado como probado, en objetivo o descartado.",
+      "build.o2": "Resultado → mapa de talento y lista objetivo",
+      "build.p3": "Búsquedas booleanas y asistidas por IA para construir pipelines a volumen sin perder precisión — incluyendo búsquedas C-suite de principio a fin.",
+      "build.o3": "Prueba → más de 450K perfiles validados",
+      "build.p4": "Loops semanales con sourcers y hiring managers para afinar el perfil con datos reales del pipeline — soy el puente entre ambos lados.",
+      "build.o4": "Ritmo → calibración semanal",
+      "build.p5": "Loops de entrevistas estructurados y bien agendados que mantienen a los candidatos enganchados y a los stakeholders a tiempo — diseñados para operar a volumen con mínimo error humano.",
+      "build.o5": "Prueba → −90% ausencias · 30 entrevistas/día",
+      "build.toolkit": "Herramientas",
+      "build.ats": "ATS",
+      "build.sourcing": "Sourcing",
+      "build.ops": "Ops y flujo de trabajo",
+      "work.label": "04 — Experiencia",
       "work.need.when": "Ago 2023 — Hoy",
       "work.need.meta": "· Tiempo completo · 3 años 2 meses",
       "work.need.place": "San Francisco, Seúl y Tokio · Presencial",
       "work.need.r1": "Ene 2026 — Actual",
       "work.need.r2desc": "Construí el motor de reclutamiento desde cero: pipelines, herramientas y operación de entrevistas.",
       "work.atoms.at": "en Atoms",
-      "work.atoms.place": "Los Ángeles · Híbrido · Otter | FutureFoods | Kitchen Valley | CloudKitchens",
+      "work.atoms.place": "Los Ángeles · Híbrido · Otter | FutureFoods | Kitchen Valley | Atoms",
       "work.more": "Logros",
       "work.atoms.list": `
         <li>Top performer del equipo varios meses — mayor volumen trimestre tras trimestre y mejor SLA de toda la empresa en 4 de los 6 trimestres evaluados.</li>
@@ -392,14 +544,14 @@
         <li>Trabajé con el top 1% mejorando procesos que ayudaron a la empresa a crecer y conectar con más personas en el mundo.</li>`,
       "work.edu.title": 'Lic. en Psicología <span class="at">UVM · Ibero</span>',
       "work.edu.desc": "Universidad del Valle de México · Universidad Iberoamericana · Excelencia Ceneval",
-      "reviews.label": "04 — Lo que dicen",
+      "reviews.label": "05 — Lo que dicen",
       "reviews.more": "Lee las recomendaciones completas en LinkedIn ↗",
-      "projects.label": "05 — Proyectos personales",
+      "projects.label": "06 — Proyectos personales",
       "projects.travel": "Itinerario interactivo para un viaje de 24 días por Inglaterra, Irlanda y Escocia — rutas diarias, mapas y presupuesto en vivo.",
       "projects.jp": "Mi propia app para estudiar japonés — flashcards con repetición espaciada, kana, kanji, gramática y vocabulario JLPT N5–N4.",
       "projects.sourcing": "Tracker de recruiting ops para los talent pools que estoy atacando, ya probé o descarté — Claude analiza los patrones y propone el siguiente batch de sourcing.",
       "projects.internal": "Uso interno",
-      "contact.label": "06 — Contacto",
+      "contact.label": "07 — Contacto",
       "contact.title": "<em>Hablemos.</em>",
       "footer.top": "Volver arriba ↑",
     };
@@ -512,6 +664,61 @@
       });
     }, { threshold: 0.5 });
     if (!reduced) document.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
+
+    // Headline: count 0 -> 100
+    function runHeadlineCount() {
+      const el = document.querySelector(".count-100");
+      if (!el || reduced) return;
+      const start = performance.now() + 450;
+      const step = (now) => {
+        const p = Math.max(0, Math.min((now - start) / 1600, 1));
+        el.textContent = Math.round(100 * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+    runHeadlineCount();
+    langBtn.addEventListener("click", runHeadlineCount);
+
+    // How I build: stage tabs with auto-advance until the visitor interacts
+    const stages = [...document.querySelectorAll(".stage")];
+    const panels = [...document.querySelectorAll(".stage-panel")];
+    const pipeline = document.querySelector(".pipeline");
+    let current = 0, autoplay = !reduced, timer;
+    function showStage(i) {
+      current = i;
+      stages.forEach((b, j) => {
+        b.classList.toggle("is-active", j === i);
+        b.classList.toggle("is-done", j < i);
+        b.setAttribute("aria-selected", j === i);
+      });
+      panels.forEach((p, j) => p.classList.toggle("is-active", j === i));
+      pipeline.style.setProperty("--progress", i / (stages.length - 1));
+    }
+    stages.forEach((b, i) => b.addEventListener("click", () => {
+      autoplay = false;
+      clearInterval(timer);
+      showStage(i);
+    }));
+    const systemIO = new IntersectionObserver(([e]) => {
+      clearInterval(timer);
+      if (e.isIntersecting && autoplay) {
+        timer = setInterval(() => showStage((current + 1) % stages.length), 4200);
+      }
+    }, { threshold: 0.4 });
+    systemIO.observe(document.getElementById("system"));
+    showStage(0);
+
+    // Spotlight that follows the cursor on cards
+    if (matchMedia("(hover: hover)").matches) {
+      document.querySelectorAll(".spot").forEach((el) => {
+        el.addEventListener("pointermove", (e) => {
+          const r = el.getBoundingClientRect();
+          el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+          el.style.setProperty("--my", `${e.clientY - r.top}px`);
+        });
+      });
+    }
 
     // Nav border once scrolled
     const nav = document.querySelector(".nav");

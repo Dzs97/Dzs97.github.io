@@ -344,7 +344,7 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
 
 /* ============ TIMELINE ============ */
 .timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li {
+.timeline > li {
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 24px;
@@ -352,12 +352,50 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
   border-top: 1px solid var(--border);
   transition: padding-left 0.3s;
 }
-.timeline li:last-child { border-bottom: 1px solid var(--border); }
-.timeline li:hover { padding-left: 8px; }
+.timeline > li:last-child { border-bottom: 1px solid var(--border); }
+.timeline > li:hover { padding-left: 8px; }
 .when { font-size: 0.78rem; color: var(--ink-faded); padding-top: 4px; }
 .timeline h3 { font-size: 1.1rem; font-weight: 500; margin: 0 0 4px; }
 .timeline .at { color: var(--ink-muted); font-weight: 400; }
 .timeline p { margin: 0; font-size: 0.95rem; }
+.place { font-size: 0.74rem; color: var(--ink-faded); margin: 2px 0 0 !important; line-height: 1.5; }
+
+.roles { list-style: none; margin: 14px 0 0; padding: 0 0 0 16px; border-left: 1px solid var(--border-strong); }
+.roles li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 4px 0; position: relative; }
+.roles li::before {
+  content: "";
+  position: absolute;
+  left: -20px; top: 12px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--ink-muted);
+}
+.roles li:first-child::before { background: var(--accent); border-color: var(--accent); }
+.roles strong { font-weight: 500; font-size: 0.95rem; }
+.roles .mono { font-size: 0.74rem; }
+
+details { margin-top: 12px; }
+summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.2s, border-color 0.2s;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 0.9rem; line-height: 1; }
+details[open] summary::after { content: "−"; }
+summary:hover { color: var(--ink); border-color: var(--border-strong); }
+.bullets { margin: 14px 0 0; padding: 0 0 0 18px; color: var(--ink-muted); font-size: 0.92rem; }
+.bullets li { padding: 3px 0; }
+.bullets li::marker { color: var(--accent); }
 
 /* ============ REVIEWS ============ */
 .quotes {
@@ -413,8 +451,12 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
 .more:hover { color: var(--accent); }
 
 /* ============ PROJECTS ============ */
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.project-wide { grid-column: 1 / -1; }
+
 .project {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 20px;
   background: var(--bg-elevated);
@@ -430,7 +472,77 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
 .route { animation: dash 20s linear infinite; }
 @keyframes dash { to { stroke-dashoffset: -200; } }
 
-.project-body { padding: 22px 24px 24px; }
+.project-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.project-body .tags { margin-top: auto; }
+.projects .project:not(.project-wide) .project-art { height: 160px; }
+div.project:hover { transform: none; }
+
+.badge {
+  font-size: 0.66rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+/* Nihongo art — two stacked flashcards */
+.art-jp {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #b8323a, #e2552b) !important;
+}
+.flashcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 16px 26px;
+  border-radius: 12px;
+  background: #fbf8f2;
+  color: #141414;
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.45);
+  transform: rotate(-4deg);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.flashcard .mono { font-size: 0.62rem; color: #6b6760; letter-spacing: 0.08em; }
+.flashcard-back {
+  position: absolute;
+  transform: translate(46px, -12px) rotate(8deg);
+  opacity: 0.55;
+  font-size: 1.6rem;
+  padding: 18px 22px;
+}
+.project:hover .flashcard { transform: rotate(0deg) translateY(-4px); }
+.project:hover .flashcard-back { transform: translate(60px, -18px) rotate(12deg); }
+
+/* Sourcing art — pipeline bars */
+.art-sourcing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 28px;
+  background: linear-gradient(135deg, #1b2b22, #2f5140) !important;
+}
+.pipe { display: flex; align-items: center; gap: 10px; }
+.pipe span {
+  height: 14px;
+  width: var(--w);
+  border-radius: 999px;
+  background: #e9e4d8;
+  opacity: 0.9;
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pipe-alt span { background: #ff7a4d; }
+.pipe em { font-style: normal; font-size: 0.62rem; color: #e9e4d8; opacity: 0.75; }
+.project:hover .pipe span { transform: scaleX(1.06); }
 .project-head { display: flex; justify-content: space-between; align-items: center; }
 .project h3 { font-size: 1.3rem; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
 .arrow { font-size: 1.2rem; transition: transform 0.3s; }
@@ -515,13 +627,15 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
   .nav-links { display: none; }
   .hero { padding-top: 56px; margin-bottom: 96px; }
   section { margin-bottom: 96px; }
-  .timeline li { grid-template-columns: 1fr; gap: 6px; }
+  .timeline > li { grid-template-columns: 1fr; gap: 6px; }
   .project-art { height: 170px; }
   .stat { padding: 22px 16px; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
   .portrait { order: -1; width: 150px; transform: rotate(-2deg); }
   .quotes { grid-template-columns: 1fr; }
   .quote { padding: 20px; }
+  .projects { grid-template-columns: 1fr; }
+  .roles li { flex-direction: column; }
 }
 
 @media (min-width: 601px) and (max-width: 720px) {

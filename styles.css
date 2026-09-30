@@ -374,6 +374,7 @@ h1 em { letter-spacing: -0.02em; color: var(--accent); }
 .roles li:first-child::before { background: var(--accent); border-color: var(--accent); }
 .roles strong { font-weight: 500; font-size: 0.95rem; }
 .roles .mono { font-size: 0.74rem; }
+.roles .role-desc { flex-basis: 100%; font-size: 0.9rem; margin: 2px 0 0; }
 
 details { margin-top: 12px; }
 summary {

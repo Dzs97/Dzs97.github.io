@@ -184,6 +184,8 @@ section { margin-bottom: 120px; }
 }
 
 /* ============ HERO ============ */
+.name { font-size: 1rem; font-weight: 500; margin: 0 0 16px; }
+
 .hero { padding-top: 96px; margin-bottom: 128px; }
 
 .status {
@@ -225,8 +227,9 @@ section { margin-bottom: 120px; }
 h1 {
   font-family: var(--sans);
   font-weight: 500;
-  font-size: clamp(3.4rem, 13vw, 7.5rem);
-  line-height: 0.95;
+  font-size: clamp(2.6rem, 9vw, 5.25rem);
+  line-height: 1;
+  max-width: 14ch;
   letter-spacing: -0.045em;
   margin: 0 0 28px;
 }

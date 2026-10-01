@@ -4,7 +4,9 @@
 
 ## What this is
 
-Diego Zurita's personal landing page, positioned as **Recruiting Operations** (official title: Recruitment Lead at Need). Based in San Francisco.
+Landing page for **Zurita Talent**, Diego Zurita's boutique recruiting firm (San Francisco). Since 2026-10-01 it's a firm site, not a CV page: Services → Who we help → Approach (pipeline + stack) → Track record → Reviews → Founder → Contact. Primary CTA is email (`mailto:` with subject "Hiring with Zurita Talent").
+
+Services: recruiting ops setup, sourcing as a service, embedded recruiting, executive search. Audience: startups (Seed–Series C) and scale-ups/enterprise. Diego's own background lives only in the Founder section (official title: Recruitment Lead at Need).
 
 - Live: https://dzs97.github.io (GitHub Pages, repo `Dzs97/Dzs97.github.io`, public)
 - Plain HTML + CSS + a little vanilla JS. No build step, no frameworks, no Tailwind.
@@ -30,7 +32,9 @@ diego-zurita-cv.pdf Downloadable CV
 4. **Fonts:** Inter (body), Instrument Serif italic (accents in `<em>`), JetBrains Mono (labels).
 5. **Logos:** company logos (Need, Atoms, BairesDev) are inline SVGs using `currentColor`, taken from each company's own site. Greenhouse/LinkedIn icons are inline SVGs from Simple Icons; the rest are PNGs in `img/tools/`.
 6. **Testimonials are verbatim quotes** from LinkedIn recommendations — never reword them, never translate them.
-7. **Job titles must match LinkedIn.** Positioning copy (hero, about) can say "Recruiting Operations".
+7. **Job titles must match LinkedIn** (Founder section).
+8. **Firm voice is "we"**; Founder section is first person. Company logos are framed as "Recruiting experience across", never as clients — Need is Diego's employer, not a client.
+9. The Sourcing Tracker appears only as an unlinked "In-house" note in the Approach section.
 
 ## Workflow
 

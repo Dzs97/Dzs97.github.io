@@ -535,6 +535,112 @@ h1 em { white-space: nowrap; }
 .case h3 { font-size: 0.74rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin: 0 0 8px; }
 .case p { margin: 0; font-size: 0.95rem; }
 
+
+/* ============ FIRM ============ */
+.logo small {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+.nav-cta:hover { transform: translateY(-1px); }
+
+.services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.service {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 24px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-elevated);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.service:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+.service-n { font-size: 0.7rem; color: var(--accent); margin-bottom: 18px; }
+.service h3 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.015em; margin: 0 0 8px; }
+.service p { margin: 0 0 20px; font-size: 0.93rem; line-height: 1.55; }
+.deliverables {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 6px;
+  font-size: 0.86rem;
+}
+.deliverables li { display: flex; align-items: center; gap: 8px; }
+.deliverables li::before {
+  content: "";
+  width: 14px; height: 14px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  box-shadow: inset 0 0 0 4px var(--bg-elevated), inset 0 0 0 8px var(--accent);
+}
+
+.audiences { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.audience {
+  padding: 28px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, var(--bg-elevated), transparent);
+}
+.audience-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--ink-muted);
+  margin-bottom: 18px;
+}
+.audience h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); font-weight: 500; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 10px; }
+.audience h3 em { color: var(--accent); }
+.audience p { margin: 0; font-size: 0.93rem; }
+
+.inhouse { margin: 16px 0 0; font-size: 0.88rem; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.inhouse-tag {
+  font-size: 0.64rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.about .section-title { margin-bottom: 20px; }
+.about .about-text { font-size: clamp(1.1rem, 2.4vw, 1.3rem); line-height: 1.5; }
+.founder-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+.steps { list-style: none; margin: 0 0 36px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.steps li {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-elevated);
+}
+.steps li > .mono { font-size: 0.7rem; color: var(--accent); padding-top: 3px; }
+.steps strong { display: block; font-weight: 500; margin-bottom: 4px; }
+.steps .muted { font-size: 0.86rem; line-height: 1.45; }
+.btn-lg { height: 54px; padding: 0 24px; font-size: 1rem; }
+
 /* ============ TIMELINE ============ */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline > li {
@@ -829,6 +935,10 @@ div.project:hover { transform: none; }
   .quotes { grid-template-columns: 1fr; }
   .quote { padding: 20px; }
   .projects { grid-template-columns: 1fr; }
+  .services, .audiences, .steps { grid-template-columns: 1fr; }
+  .nav { gap: 10px; }
+  .nav-cta { height: 34px; padding: 0 12px; font-size: 0.78rem; }
+  .logo small { display: none; }
   .logos { margin-top: 48px; }
   .pipeline { grid-template-columns: 1fr; gap: 4px; }
   .pipeline::before, .pipeline-progress { display: none; }

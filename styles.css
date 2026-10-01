@@ -358,15 +358,18 @@ h1 em { white-space: nowrap; }
   border-top: 1px solid var(--border);
 }
 .logos-label { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faded); }
-.logos ul { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 32px; list-style: none; margin: 0; padding: 0; }
+.logos-label { flex-basis: 100%; }
+.logos ul { width: 100%; justify-content: space-between; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; list-style: none; margin: 0; padding: 0; }
 .wm { display: flex; align-items: center; color: var(--ink-muted); opacity: 0.75; transition: opacity 0.25s, color 0.25s; }
 .wm:hover { opacity: 1; color: var(--ink); }
 .logo-svg { display: block; width: auto; }
-.logo-need { height: 20px; }
-.logo-atoms { height: 15px; }
-.logo-baires { height: 22px; }
-.logo-baires .mark { transition: fill 0.25s; }
-.wm:hover .logo-baires .mark { fill: #f66135; }
+.strip-need, .strip-zinq { height: 18px; }
+.strip-atoms { height: 14px; }
+.strip-treeline { height: 19px; }
+.strip-nolla { height: 17px; }
+.strip-baires { height: 20px; }
+.strip-baires .mark, .cl-baires .mark { transition: fill 0.25s; }
+.wm:hover .strip-baires .mark, .client:hover .cl-baires .mark { fill: #f66135; }
 
 /* ============ SPOTLIGHT ============ */
 .spot { position: relative; isolation: isolate; }
@@ -960,7 +963,7 @@ div.project:hover { transform: none; }
 }
 
 /* ============ CLIENTS ============ */
-.clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.clients { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .client {
   display: flex;
   flex-direction: column;
@@ -978,6 +981,8 @@ div.project:hover { transform: none; }
 .cl-treeline { height: 22px; }
 .cl-nolla { height: 20px; }
 .cl-zinq { height: 22px; }
+.cl-atoms { height: 16px; }
+.cl-baires { height: 22px; }
 .client p { margin: 0; font-size: 0.84rem; line-height: 1.45; flex: 1; }
 .client-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 0.66rem; }
 .client-round {

@@ -33,9 +33,8 @@ diego-zurita-cv.pdf Downloadable CV
 5. **Logos:** company logos (Need, Atoms, BairesDev) are inline SVGs using `currentColor`, taken from each company's own site. Greenhouse/LinkedIn icons are inline SVGs from Simple Icons; the rest are PNGs in `img/tools/`.
 6. **Testimonials are verbatim quotes** from LinkedIn recommendations — never reword them, never translate them.
 7. **Job titles must match LinkedIn** (Founder section).
-8. **Firm voice is "we"**; Founder section is first person. The hero strip (Need, Atoms, BairesDev) is "Recruiting experience across".
-10. **Clients section** ("Companies we've hired for" — wording chosen because Need is Diego's employer, not a paying client): Need (Series A · Venrock), Treeline (Series A · a16z), Nolla Health (Seed · General Catalyst), Zinq AI (Growth · Stockdale Capital). Rounds/investors come from Diego; logos are inline SVGs from each company's site. Add new clients as another `.client` card + an ES string.
-9. The Sourcing Tracker appears only as an unlinked "In-house" note in the Approach section.
+8. **Firm voice is "we"**; Founder section is first person. The hero strip ("Recruiting experience across") must list exactly the same companies, in the same order, as the Clients section.
+10. **Clients section** ("Companies we've hired for" — wording chosen because Need is Diego's employer, not a paying client), in this order: Need (Series A · Venrock), Atoms (ex-CloudKitchens; $1.7B led by a16z, Jul 2026), Treeline (Series A · a16z), Nolla Health (Seed · General Catalyst), Zinq AI (Growth · Stockdale Capital), BairesDev (bootstrapped since 2009 — never raised VC). Logos are inline SVGs from each company's site. To add a client: new `.client` card + matching `.wm` in the hero strip + ES string.
 
 ## Workflow
 

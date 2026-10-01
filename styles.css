@@ -958,3 +958,40 @@ div.project:hover { transform: none; }
 @media (max-width: 380px) {
   .stats { grid-template-columns: 1fr; }
 }
+
+/* ============ CLIENTS ============ */
+.clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.client {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 20px 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-elevated);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.client:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+.client-mark { height: 30px; display: flex; align-items: center; color: var(--ink); }
+.client-logo { display: block; width: auto; max-width: 100%; }
+.cl-need { height: 22px; }
+.cl-treeline { height: 22px; }
+.cl-nolla { height: 20px; }
+.cl-zinq { height: 22px; }
+.client p { margin: 0; font-size: 0.84rem; line-height: 1.45; flex: 1; }
+.client-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 0.66rem; }
+.client-round {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.client-backer { color: var(--ink-muted); white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .clients { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .clients { grid-template-columns: 1fr; }
+}

@@ -4,7 +4,7 @@
 
 ## What this is
 
-Landing page for **Zurita Talent**, Diego Zurita's boutique recruiting firm (San Francisco). Since 2026-10-01 it's a firm site, not a CV page: Services → Who we help → Approach (pipeline + stack) → Track record → Reviews → Founder → Contact. Primary CTA is email (`mailto:` with subject "Hiring with Zurita Talent").
+Landing page for **Zurita Talent**, Diego Zurita's boutique recruiting firm (San Francisco). Since 2026-10-01 it's a firm site, not a CV page: Clients → Services → Who we help → Approach (pipeline + stack) → Track record → Reviews → Founder → Contact. Primary CTA is email (`mailto:` with subject "Hiring with Zurita Talent").
 
 Services: recruiting ops setup, sourcing as a service, embedded recruiting, executive search. Audience: startups (Seed–Series C) and scale-ups/enterprise. Diego's own background lives only in the Founder section (official title: Recruitment Lead at Need).
 
@@ -33,7 +33,8 @@ diego-zurita-cv.pdf Downloadable CV
 5. **Logos:** company logos (Need, Atoms, BairesDev) are inline SVGs using `currentColor`, taken from each company's own site. Greenhouse/LinkedIn icons are inline SVGs from Simple Icons; the rest are PNGs in `img/tools/`.
 6. **Testimonials are verbatim quotes** from LinkedIn recommendations — never reword them, never translate them.
 7. **Job titles must match LinkedIn** (Founder section).
-8. **Firm voice is "we"**; Founder section is first person. Company logos are framed as "Recruiting experience across", never as clients — Need is Diego's employer, not a client.
+8. **Firm voice is "we"**; Founder section is first person. The hero strip (Need, Atoms, BairesDev) is "Recruiting experience across".
+10. **Clients section** ("Companies we've hired for" — wording chosen because Need is Diego's employer, not a paying client): Need (Series A · Venrock), Treeline (Series A · a16z), Nolla Health (Seed · General Catalyst), Zinq AI (Growth · Stockdale Capital). Rounds/investors come from Diego; logos are inline SVGs from each company's site. Add new clients as another `.client` card + an ES string.
 9. The Sourcing Tracker appears only as an unlinked "In-house" note in the Approach section.
 
 ## Workflow

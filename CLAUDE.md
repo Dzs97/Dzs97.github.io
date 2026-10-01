@@ -4,7 +4,7 @@
 
 ## What this is
 
-Landing page for **Zurita Talent**, Diego Zurita's boutique recruiting firm (San Francisco). Since 2026-10-01 it's a firm site, not a CV page: Clients → Services → Who we help → Approach (pipeline + stack) → Track record → Reviews → Founder → Contact. Primary CTA is email (`mailto:` with subject "Hiring with Zurita Talent").
+Landing page for **Zurita Talent**, Diego Zurita's **international** boutique recruiting firm (San Francisco · Europe · Tokyo & Seoul). The hero pill shows live clocks for SF (America/Los_Angeles), EU (Europe/Berlin) and JP/KR (Asia/Tokyo) via `data-tz` spans. Since 2026-10-01 it's a firm site, not a CV page: Clients → Services → Who we help → Approach (pipeline + stack) → Track record → Reviews → Founder → Contact. Primary CTA is email (`mailto:` with subject "Hiring with Zurita Talent").
 
 Services: recruiting ops setup, sourcing as a service, embedded recruiting, executive search. Audience: startups (Seed–Series C) and scale-ups/enterprise. Diego's own background lives only in the Founder section (official title: Recruitment Lead at Need).
 

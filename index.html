@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zurita Talent — Boutique recruiting firm</title>
-  <meta name="description" content="Zurita Talent is a boutique recruiting firm in San Francisco. Recruiting ops setup, sourcing, embedded recruiting and executive search — recruiting systems built from 0 to 100." />
+  <title>Zurita Talent — International boutique recruiting firm</title>
+  <meta name="description" content="Zurita Talent is an international boutique recruiting firm working across San Francisco, Europe, Japan and Korea. Recruiting ops setup, sourcing, embedded recruiting and executive search — recruiting systems built from 0 to 100." />
 
   <!-- Link previews (LinkedIn, WhatsApp, Slack, X) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dzs97.github.io/" />
-  <meta property="og:title" content="Zurita Talent — Boutique recruiting firm" />
+  <meta property="og:title" content="Zurita Talent — International boutique recruiting firm" />
   <meta property="og:description" content="Recruiting systems, built from 0 to 100." />
   <meta property="og:image" content="https://dzs97.github.io/og.png" />
   <meta property="og:image:width" content="1200" />
@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23111'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='36' fill='%23f5f5f4'>z</text></svg>" />
   <!-- Bump ?v= whenever styles.css changes so browsers skip their cache -->
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=17" />
   <script>
     // Apply saved theme before paint to avoid a flash
     try {
@@ -62,9 +62,12 @@
     <section class="hero">
       <div class="status reveal">
         <span class="dot"></span>
-        <span data-i18n="hero.status">Boutique recruiting firm · San Francisco</span>
-        <span class="sep">·</span>
-        <span class="mono" id="clock">SF</span>
+        <span data-i18n="hero.status">International boutique recruiting firm</span>
+        <span class="clocks mono" aria-label="Local times">
+          <span data-tz="America/Los_Angeles" data-city="SF">SF</span>
+          <span data-tz="Europe/Berlin" data-city="EU">EU</span>
+          <span data-tz="Asia/Tokyo" data-city="JP/KR">JP/KR</span>
+        </span>
       </div>
 
       <h1 class="reveal" data-i18n="hero.title">
@@ -544,7 +547,7 @@
     </section>
 
     <footer class="footer mono">
-      <span>© <span id="year"></span> Zurita Talent · San Francisco</span>
+      <span>© <span id="year"></span> Zurita Talent · San Francisco · Europe · Tokyo &amp; Seoul</span>
       <a href="#top" data-i18n="footer.top">Back to top ↑</a>
     </footer>
   </main>
@@ -559,7 +562,7 @@
       "nav.results": "Resultados",
       "nav.about": "Fundador",
       "nav.cta": "Hablemos",
-      "hero.status": "Firma boutique de reclutamiento · San Francisco",
+      "hero.status": "Firma boutique internacional de reclutamiento",
       "hero.title": 'Sistemas de reclutamiento, construidos de <em>0&nbsp;a&nbsp;<span class="count-100">100</span></em>',
       "hero.lede": "Montamos tu operación de reclutamiento, encontramos a la gente que tú no encuentras y llevamos búsquedas de principio a fin — para startups que arman su primer motor de contratación y equipos que necesitan <em>escalar el que ya tienen.</em>",
       "cta.start": "Iniciar una búsqueda",
@@ -693,13 +696,16 @@
       try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
     });
 
-    // Local time in San Francisco
-    const clock = document.getElementById("clock");
+    // Local times for each region we hire in (24h keeps the pill compact)
+    const clocks = document.querySelectorAll("[data-tz]");
     const tick = () => {
-      const t = new Intl.DateTimeFormat("en-US", {
-        timeZone: "America/Los_Angeles", hour: "2-digit", minute: "2-digit"
-      }).format(new Date());
-      clock.textContent = `SF ${t}`;
+      const now = new Date();
+      clocks.forEach((el) => {
+        const t = new Intl.DateTimeFormat("en-GB", {
+          timeZone: el.dataset.tz, hour: "2-digit", minute: "2-digit"
+        }).format(now);
+        el.textContent = `${el.dataset.city} ${t}`;
+      });
     };
     tick();
     setInterval(tick, 30000);

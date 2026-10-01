@@ -21,7 +21,7 @@ img/                diego.jpg (portrait), diego-square.jpg (avatar)
 img/tools/          64px tool icons (Ashby, Lever, Juicebox, Notion, Wrangle)
 og.png              1200×630 link preview (LinkedIn/WhatsApp/Slack)
 _og/og.html         Template used to render og.png (underscore dir = not published)
-diego-zurita-cv.pdf Downloadable CV
+diego-zurita-cv.pdf Source CV (content reference only — excluded from the published site via _config.yml)
 ```
 
 ## Conventions

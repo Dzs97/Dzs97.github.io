@@ -6,6 +6,39 @@
   <title>Zurita Talent — International boutique recruiting firm</title>
   <meta name="description" content="Zurita Talent is an international boutique recruiting firm working across San Francisco, Europe, Japan and Korea. Recruiting ops setup, sourcing, embedded recruiting and executive search — recruiting systems built from 0 to 100." />
 
+  <link rel="canonical" href="https://dzs97.github.io/" />
+  <meta name="robots" content="index, follow" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Zurita Talent",
+    "description": "International boutique recruiting firm: recruiting ops setup, sourcing as a service, embedded recruiting and executive search.",
+    "url": "https://dzs97.github.io/",
+    "image": "https://dzs97.github.io/og.png",
+    "email": "dzurita97@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "US" },
+    "areaServed": ["United States", "Europe", "Japan", "South Korea"],
+    "knowsLanguage": ["en", "es"],
+    "founder": {
+      "@type": "Person",
+      "name": "Diego Zurita",
+      "jobTitle": "Founder",
+      "sameAs": ["https://www.linkedin.com/in/diegozuritas/"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Recruiting services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recruiting ops setup" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sourcing as a service" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Embedded recruiting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive search" } }
+      ]
+    }
+  }
+  </script>
+
   <!-- Link previews (LinkedIn, WhatsApp, Slack, X) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dzs97.github.io/" />
@@ -22,7 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23111'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='36' fill='%23f5f5f4'>z</text></svg>" />
   <!-- Bump ?v= whenever styles.css changes so browsers skip their cache -->
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=19" />
   <script>
     // Apply saved theme before paint to avoid a flash
     try {
@@ -44,8 +77,8 @@
     <nav class="nav-links">
       <a href="#clients" data-i18n="nav.clients">Clients</a>
       <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#regions" data-i18n="nav.regions">Regions</a>
       <a href="#system" data-i18n="nav.approach">Approach</a>
-      <a href="#results" data-i18n="nav.results">Results</a>
       <a href="#about" data-i18n="nav.about">About</a>
     </nav>
     <a class="nav-cta" href="mailto:dzurita97@gmail.com?subject=Hiring%20with%20Zurita%20Talent" data-i18n="nav.cta">Let's talk</a>
@@ -310,6 +343,28 @@
           </ul>
         </article>
       </div>
+
+      <div class="engage">
+        <p class="toolkit-label mono" data-i18n="engage.label">How we engage</p>
+        <div class="engage-grid">
+          <div class="engage-card spot">
+            <h3 data-i18n="engage.1.title">Monthly retainer</h3>
+            <p class="muted" data-i18n="engage.1.desc">Ongoing sourcing or embedded recruiting capacity, billed monthly. Scale up or down as your hiring plan changes.</p>
+            <span class="engage-fit mono" data-i18n="engage.1.fit">Best for → sourcing · embedded</span>
+          </div>
+          <div class="engage-card spot">
+            <h3 data-i18n="engage.2.title">Project</h3>
+            <p class="muted" data-i18n="engage.2.desc">A fixed scope and a fixed fee to design and launch your recruiting system, with a documented handoff at the end.</p>
+            <span class="engage-fit mono" data-i18n="engage.2.fit">Best for → recruiting ops setup</span>
+          </div>
+          <div class="engage-card spot">
+            <h3 data-i18n="engage.3.title">Retained search</h3>
+            <p class="muted" data-i18n="engage.3.desc">A dedicated search for one critical role, with a staged fee tied to kickoff, shortlist and hire.</p>
+            <span class="engage-fit mono" data-i18n="engage.3.fit">Best for → executive search</span>
+          </div>
+        </div>
+        <a class="more mono" href="mailto:dzurita97@gmail.com?subject=Pricing%20%E2%80%94%20Zurita%20Talent" data-i18n="engage.cta">Ask for pricing ↗</a>
+      </div>
     </section>
 
     <!-- ============ WHO WE HELP ============ -->
@@ -329,9 +384,56 @@
       </div>
     </section>
 
+    <!-- ============ WHERE WE HIRE ============ -->
+    <section id="regions" class="reveal">
+      <p class="label mono" data-i18n="regions.label">03 — Where we hire</p>
+      <h2 class="section-title" data-i18n="regions.title">Three regions, <em>one process.</em></h2>
+      <div class="regions">
+        <article class="region spot">
+          <div class="region-head">
+            <span class="region-code mono">SF</span>
+            <span class="region-time mono" data-tz="America/Los_Angeles" data-city="">--:--</span>
+          </div>
+          <h3 data-i18n="regions.1.title">San Francisco &amp; the US</h3>
+          <p class="muted" data-i18n="regions.1.desc">Our home base. Startups and scale-ups across the Bay Area and remote US, from first hires to full teams.</p>
+          <ul class="deliverables" data-i18n="regions.1.list">
+            <li>Engineering &amp; AI</li>
+            <li>Go-to-market &amp; operations</li>
+            <li>Leadership</li>
+          </ul>
+        </article>
+        <article class="region spot">
+          <div class="region-head">
+            <span class="region-code mono">EU</span>
+            <span class="region-time mono" data-tz="Europe/Berlin" data-city="">--:--</span>
+          </div>
+          <h3 data-i18n="regions.2.title">Europe</h3>
+          <p class="muted" data-i18n="regions.2.desc">Building European teams for US-headquartered companies — from a first remote hire to a full regional hub.</p>
+          <ul class="deliverables" data-i18n="regions.2.list">
+            <li>Market mapping by country</li>
+            <li>GDPR-aware candidate data</li>
+            <li>CET-friendly interview loops</li>
+          </ul>
+        </article>
+        <article class="region spot">
+          <div class="region-head">
+            <span class="region-code mono">JP · KR</span>
+            <span class="region-time mono" data-tz="Asia/Tokyo" data-city="">--:--</span>
+          </div>
+          <h3 data-i18n="regions.3.title">Tokyo &amp; Seoul</h3>
+          <p class="muted" data-i18n="regions.3.desc">Hiring across Japan and Korea, with interview loops that span the Pacific — markets where we run hiring today.</p>
+          <ul class="deliverables" data-i18n="regions.3.list">
+            <li>Local talent mapping</li>
+            <li>Bilingual candidates</li>
+            <li>US ↔ Asia scheduling</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- ============ APPROACH ============ -->
     <section id="system" class="reveal">
-      <p class="label mono" data-i18n="build.label">03 — Approach</p>
+      <p class="label mono" data-i18n="build.label">04 — Approach</p>
       <h2 class="section-title" data-i18n="build.title">A recruiting system, <em>end to end.</em></h2>
 
       <div class="pipeline" role="tablist" aria-label="Recruiting system stages">
@@ -437,7 +539,7 @@
 
     <!-- ============ RESULTS ============ -->
     <section id="results" class="reveal">
-      <p class="label mono" data-i18n="results.label">04 — Track record</p>
+      <p class="label mono" data-i18n="results.label">05 — Track record</p>
       <div class="stats">
         <div class="stat spot">
           <span class="num" data-count="3000" data-suffix="+">3,000+</span>
@@ -460,7 +562,7 @@
 
     <!-- ============ REVIEWS ============ -->
     <section id="reviews" class="reveal">
-      <p class="label mono" data-i18n="reviews.label">05 — What people say</p>
+      <p class="label mono" data-i18n="reviews.label">06 — What people say</p>
       <div class="quotes">
         <figure class="quote quote-featured spot">
           <blockquote>“In my 10+ years of recruiting I have never worked with a better recruiting coordinator or talent partner. Diego is the ultimate team player… an extremely data driven, solutions first professional.”</blockquote>
@@ -496,7 +598,7 @@
 
     <!-- ============ FOUNDER ============ -->
     <section id="about" class="about reveal">
-      <p class="label mono" data-i18n="about.label">06 — Founder</p>
+      <p class="label mono" data-i18n="about.label">07 — Founder</p>
       <div class="about-grid">
         <div>
           <h2 class="section-title" data-i18n="about.title">Hi, I'm <em>Diego Zurita.</em></h2>
@@ -527,7 +629,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="contact reveal">
-      <p class="label mono" data-i18n="contact.label">07 — Contact</p>
+      <p class="label mono" data-i18n="contact.label">08 — Contact</p>
       <h2 data-i18n="contact.title">Hiring? <em>Let's talk.</em></h2>
       <ol class="steps">
         <li><span class="mono">01</span><div><strong data-i18n="contact.s1">Intro call</strong><span class="muted" data-i18n="contact.s1d">30 minutes on your roles, timeline and current process.</span></div></li>
@@ -558,8 +660,8 @@
     const ES = {
       "nav.clients": "Clientes",
       "nav.services": "Servicios",
+      "nav.regions": "Regiones",
       "nav.approach": "Método",
-      "nav.results": "Resultados",
       "nav.about": "Fundador",
       "nav.cta": "Hablemos",
       "hero.status": "Firma boutique internacional de reclutamiento",
@@ -598,7 +700,29 @@
       "who.2.tag": "Scale-ups y enterprise",
       "who.2.title": "Equipos que necesitan <em>escalar el que ya tienen</em>",
       "who.2.desc": "Ya hay un equipo de recruiting, pero el volumen subió y el proceso tiene fugas. Arreglamos la operación y sumamos capacidad de sourcing.",
-      "build.label": "03 — Método",
+      "engage.label": "Cómo trabajamos contigo",
+      "engage.1.title": "Retainer mensual",
+      "engage.1.desc": "Capacidad continua de sourcing o reclutamiento embebido, facturada mes a mes. Escala hacia arriba o abajo según cambie tu plan de contratación.",
+      "engage.1.fit": "Ideal para → sourcing · embebido",
+      "engage.2.title": "Proyecto",
+      "engage.2.desc": "Alcance fijo y precio fijo para diseñar y lanzar tu sistema de reclutamiento, con un handoff documentado al final.",
+      "engage.2.fit": "Ideal para → setup de recruiting ops",
+      "engage.3.title": "Búsqueda retenida",
+      "engage.3.desc": "Una búsqueda dedicada para un rol crítico, con un fee por etapas ligado al arranque, la shortlist y la contratación.",
+      "engage.3.fit": "Ideal para → executive search",
+      "engage.cta": "Pide precios ↗",
+      "regions.label": "03 — Dónde contratamos",
+      "regions.title": "Tres regiones, <em>un solo proceso.</em>",
+      "regions.1.title": "San Francisco y EE.UU.",
+      "regions.1.desc": "Nuestra base. Startups y scale-ups en el Bay Area y en remoto por todo EE.UU., desde las primeras contrataciones hasta equipos completos.",
+      "regions.1.list": "<li>Ingeniería e IA</li><li>Go-to-market y operaciones</li><li>Liderazgo</li>",
+      "regions.2.title": "Europa",
+      "regions.2.desc": "Armamos equipos en Europa para empresas con sede en EE.UU. — desde la primera contratación remota hasta un hub regional completo.",
+      "regions.2.list": "<li>Mapeo de mercado por país</li><li>Datos de candidatos conforme a GDPR</li><li>Loops de entrevista en horario CET</li>",
+      "regions.3.title": "Tokio y Seúl",
+      "regions.3.desc": "Contratación en Japón y Corea, con loops de entrevista que cruzan el Pacífico — mercados donde hoy operamos contrataciones.",
+      "regions.3.list": "<li>Mapeo de talento local</li><li>Candidatos bilingües</li><li>Agendamiento EE.UU. ↔ Asia</li>",
+      "build.label": "04 — Método",
       "build.title": "Un sistema de reclutamiento, <em>de punta a punta.</em>",
       "build.s1": "Criterios de sourcing",
       "build.s2": "Investigación",
@@ -620,20 +744,20 @@
       "build.sourcing": "Sourcing",
       "build.ops": "Workflow",
       "build.inhouse": '<span class="inhouse-tag mono">Propio</span> Además, nuestro propio sourcing tracker, que registra cada talent pool que hemos probado, atacado o descartado — y usa Claude para proponer el siguiente batch.',
-      "results.label": "04 — Trayectoria",
+      "results.label": "05 — Trayectoria",
       "results.1": "entrevistas coordinadas con líderes de equipo, directores y C-suite",
       "results.2": "de ausencias a entrevistas en una operación de contratación de alto volumen",
       "results.3": "perfiles de candidatos investigados y validados para roles técnicos",
       "results.4": "entrevistas de capacidad gracias a un proceso de alto volumen que diseñamos",
-      "reviews.label": "05 — Lo que dicen",
+      "reviews.label": "06 — Lo que dicen",
       "reviews.more": "Lee las recomendaciones completas en LinkedIn ↗",
-      "about.label": "06 — Fundador",
+      "about.label": "07 — Fundador",
       "about.title": "Hola, soy <em>Diego Zurita.</em>",
       "about.text": 'Psicólogo convertido en constructor de recruiting ops, con base en San Francisco. <span class="muted">Llevo cinco años construyendo los sistemas detrás de la contratación — desde executive search en BairesDev hasta recruiting ops de alto volumen en Atoms, y hoy como Recruitment Lead en Need entre San Francisco, Seúl y Tokio.</span>',
       "about.en": "English · Nativo",
       "about.es": "Español · Nativo",
       "about.ja": "日本語 · Básico",
-      "contact.label": "07 — Contacto",
+      "contact.label": "08 — Contacto",
       "contact.title": "¿Contratando? <em>Hablemos.</em>",
       "contact.s1": "Llamada inicial",
       "contact.s1d": "30 minutos sobre tus roles, tiempos y proceso actual.",
@@ -704,7 +828,7 @@
         const t = new Intl.DateTimeFormat("en-GB", {
           timeZone: el.dataset.tz, hour: "2-digit", minute: "2-digit"
         }).format(now);
-        el.textContent = `${el.dataset.city} ${t}`;
+        el.textContent = el.dataset.city ? `${el.dataset.city} ${t}` : t;
       });
     };
     tick();

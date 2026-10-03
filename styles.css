@@ -1068,3 +1068,133 @@ div.project:hover { transform: none; }
 @media (max-width: 760px) {
   .engage-grid, .regions { grid-template-columns: 1fr; }
 }
+
+/* ============ LIVE CLOCKS ============ */
+.live { margin-top: 48px; }
+.live-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.live-pulse {
+  position: relative;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+}
+.live-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.live-clocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.live-clock {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-elevated);
+}
+.live-city {
+  grid-row: 1 / 3;
+  font-size: 0.7rem;
+  padding: 6px 9px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--bg);
+}
+.live-time { font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+
+.live-status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.66rem; color: var(--ink-faded); }
+.live-status i {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--ink-faded);
+  flex-shrink: 0;
+}
+.is-open > .live-status, .is-open .live-status { color: #16a34a; }
+.is-open .live-status i { background: #22c55e; box-shadow: 0 0 0 3px color-mix(in srgb, #22c55e 25%, transparent); }
+:root[data-theme="dark"] .is-open .live-status { color: #4ade80; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .is-open .live-status { color: #4ade80; } }
+
+.region-clock { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+
+/* ============ COVERAGE CHART ============ */
+.coverage {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16px 32px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 26px 24px 20px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-elevated);
+}
+.coverage-copy h3 { font-size: 1.3rem; font-weight: 500; letter-spacing: -0.02em; margin: 0 0 8px; }
+.coverage-copy h3 em { color: var(--accent); }
+.coverage-copy p { margin: 0; font-size: 0.9rem; line-height: 1.55; }
+.coverage-chart { position: relative; display: grid; gap: 8px; padding-top: 22px; }
+.lane { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 10px; }
+.lane-name { font-size: 0.68rem; color: var(--ink-muted); }
+.lane-track {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(90deg, var(--border) 0 1px, transparent 1px calc(100% / 24));
+  box-shadow: inset 0 0 0 1px var(--border);
+  overflow: hidden;
+}
+.lane-seg {
+  position: absolute;
+  top: 0; bottom: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.lane.is-open .lane-seg { background: var(--accent); }
+.coverage-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 58px;
+  font-size: 0.62rem;
+  color: var(--ink-faded);
+}
+.coverage-now {
+  position: absolute;
+  top: 0;
+  bottom: 18px;
+  left: calc(58px + (100% - 58px) * var(--x-num, 0));
+  width: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+.coverage-now .mono {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  white-space: nowrap;
+}
+.coverage-note { grid-column: 1 / -1; margin: 4px 0 0; font-size: 0.66rem; color: var(--ink-faded); }
+
+@media (max-width: 760px) {
+  .live-clocks { grid-template-columns: 1fr; }
+  .coverage { grid-template-columns: 1fr; padding: 22px 18px 18px; }
+}

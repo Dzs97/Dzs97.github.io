@@ -50,7 +50,7 @@ diego-zurita-cv.pdf Source CV (content reference only — excluded from the publ
 
 ## Communication
 
-Diego speaks Spanish primarily — reply in Spanish, concise, with brief technical reasoning when useful. He's comfortable with git/terminal but isn't a developer.
+Reply in the language Diego writes in (English → English, Spanish → Spanish), concise, with brief technical reasoning when useful. He's comfortable with git/terminal but isn't a developer.
 
 ## Pending / backlog
 

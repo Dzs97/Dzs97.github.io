@@ -22,7 +22,7 @@ img/tools/          64px tool icons (Ashby, Lever, Juicebox, Notion, Wrangle)
 og.png              1200×630 link preview (LinkedIn/WhatsApp/Slack)
 sitemap.xml, robots.txt  SEO; JSON-LD (ProfessionalService) lives in <head> — update it if services/regions change
 _og/og.html         Template used to render og.png (underscore dir = not published)
-diego-zurita-cv.pdf Source CV (content reference only — excluded from the published site via _config.yml)
+diego-zurita-cv.pdf Source CV, local only (gitignored; the repo is public)
 ```
 
 ## Conventions
